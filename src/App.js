@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component }  from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class Soma extends Component {
+mensagem = (frase, num) => {
+return (
+    <div> 
+    <h1>Meu numero é {num} e meu dobro é {frase}  </h1> 
+   
     </div>
-  );
+)
+  }
+calc = (y) => {
+return y * 60
+}
+  render(){
+    return(
+<div>
+<h1>{this.mensagem(":",50)}</h1>
+<h2>{this.calc(2)}</h2>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default Soma 
