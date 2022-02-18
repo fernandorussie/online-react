@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 export default class Calc extends React.Component {
   state = {
     num1: '',
@@ -104,26 +105,32 @@ export default class Calc extends React.Component {
       sinal: '',
     });
   };
+  
   render() {
     const { sub, mult, div, soma, clear, media, porcen } = this;
     const { result } = this.state;
     return (
-      <div>
+      <div className="container">
         <h1>Calculadora</h1>
-        <input onChange={this.handleChange} value={this.state.num1} />
-        <input onChange={this.handleChange2} value={this.state.num2} />
-        <button onClick={sub}>-</button>
-        <button onClick={mult}>x</button>
-        <button onClick={div}>/</button>
-        <button onClick={soma}>+</button>
-        <button onClick={clear}>C</button>
-        <button onClick={media}>Media</button>
-        <button onClick={porcen}>%</button>
+        
+        <div className="box_inputs">
+          <input onChange={this.handleChange} value={this.state.num1} />
+          <input onChange={this.handleChange2} value={this.state.num2} />
+        </div>
+        <div className="box_buttons">
+          <button onClick={sub}>-</button>
+          <button onClick={mult}>x</button>
+          <button onClick={div}>/</button>
+          <button onClick={soma}>+</button>
+          <button onClick={media}>Media</button>
+          <button onClick={porcen}>%</button>
+          <button onClick={clear}>C</button>
+        </div>
         <div>
-          <h3>
+          <h3 className="calc">
             {this.state.num1} {this.state.sinal} {this.state.num2}
           </h3>
-          <h2>{result}</h2>
+          <h2 className="result">{result}</h2>
         </div>
       </div>
     );
