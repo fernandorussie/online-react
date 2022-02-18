@@ -22,7 +22,7 @@ export default class Calc extends React.Component {
     // this.setState({
     //   result: (num1 && num2) !== null ? num1 + num2 : result,
     //   sinal: '-',
-    // });
+    // }) 
     if (this.state.num1 && this.state.num2 != null) {
       this.setState({
         result: this.state.num1 - this.state.num2,
