@@ -111,7 +111,7 @@ export default class Calc extends React.Component {
     const { result } = this.state;
     return (
       <div className="container">
-        <h1>Calculadora</h1>
+        <h1>Calculadora Completa e Grátis</h1>
         
         <div className="box_inputs">
           <input onChange={this.handleChange} value={this.state.num1} />
