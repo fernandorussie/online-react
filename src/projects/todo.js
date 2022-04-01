@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -98,7 +98,7 @@ export default class Todo extends React.Component {
   remove = (id) => {
     let { lista, tarefa } = this.state;
     this.setState({
-      lista: lista.filter((item) => item.id != id),
+      lista: lista.filter((item) => item.id !== id),
     });
   };
   // prev = (event) => {
